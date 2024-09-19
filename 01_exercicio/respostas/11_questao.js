@@ -1,11 +1,17 @@
 let anoBissexto = (ano) => {
-  if (ano % 4 === 0 || ano % 400 === 0) {
+  if (ano % 400 === 0) {
     return "Ano bissexto";
-  } else if (ano % 100 === 0) {
-    return "Não é bissexto";
-  } else {
+  }
+
+  if (ano % 100 === 0) {
     return "Não é bissexto";
   }
+
+  if (ano % 4 === 0) {
+    return "Ano bissexto";
+  }
+
+  return false;
 };
 
 console.log(anoBissexto(2024));
